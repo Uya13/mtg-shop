@@ -6,7 +6,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app ./app
 
 FROM base AS test
-COPY requirements-dev.txt pyproject.toml .
+COPY requirements-dev.txt pyproject.toml ./
 RUN pip install --no-cache-dir -r requirements-dev.txt
 COPY tests ./tests
 CMD ["python", "-m", "pytest", "-q"]
