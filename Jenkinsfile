@@ -7,7 +7,7 @@ pipeline {
     }
     triggers { pollSCM('H/5 * * * *') }
     parameters {
-        string(name: 'DEPLOY_HOST', defaultValue: '', description: 'IP или DNS второй VM')
+        string(name: 'DEPLOY_HOST', defaultValue: '10.77.0.11', description: 'IP или DNS второй VM')
         string(name: 'DEPLOY_USER', defaultValue: 'student', description: 'SSH пользователь второй VM')
     }
     environment {
